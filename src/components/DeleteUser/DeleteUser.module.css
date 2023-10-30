@@ -1,0 +1,25 @@
+.deleteButton {
+  background-color: #f69c9e;
+  margin-top: 0.6rem;
+  color: rgba(0, 0, 0, 0.9);
+  border: none;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  font-family: verdana;
+  box-shadow: 0 0.1rem 0.4rem -0.2rem rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+/** ::hover pseudo element */
+.deleteButton:hover {
+  background-color: #f69c9e;
+  color: darkgray;
+  cursor: pointer;
+}
+
+/** ::active pseudo element */
+.deleteButton:active {
+  transform: scale(0.95);
+}

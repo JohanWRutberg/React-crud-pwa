@@ -1,0 +1,50 @@
+.container {
+  background-color: lightgray;
+  padding: 1.2rem;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.5rem 0.8rem -0.2rem rgba(0, 0, 0, 0.8);
+}
+
+.submitButton {
+  background-color: #3c425c;
+  margin-top: 0.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  font-family: verdana;
+  box-shadow: 0 0.1rem 0.4rem -0.2rem rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+/** ::hover pseudo element */
+.submitButton:hover {
+  background-color: #2b3045;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.headline {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b3045;
+  justify-content: center;
+  margin-top: 0px;
+}
+/** ::active pseudo element */
+.submitButton:active {
+  transform: scale(0.95);
+}
+
+.feedbackText {
+  font-family: verdana;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
