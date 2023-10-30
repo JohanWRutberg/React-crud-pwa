@@ -12,13 +12,17 @@
 
 .list {
   display: flex;
+  align-items: flex-start;
+
   flex-direction: row;
   justify-content: space-between;
   width: 95%;
 }
 
 .name {
+  padding: 1px;
   display: flex;
+  align-items: top;
   flex-direction: row;
 }
 

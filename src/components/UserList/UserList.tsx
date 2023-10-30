@@ -10,13 +10,14 @@ export const UserList = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [deleteSuccessMessage, setDeleteSuccessMessage] = useState("");
 
+  const fetchData = async () => {
+    const querySnapshot = await getDocs(userCollection);
+    const userList = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    setUsers(userList);
+  };
+
   useEffect(() => {
-    const getData = async () => {
-      const querySnapshot = await getDocs(userCollection);
-      const userList = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setUsers(userList);
-    };
-    getData();
+    fetchData();
   }, []);
 
   const handleUpdateUser = (id, updatedFirstName, updatedLastName) => {
@@ -68,6 +69,10 @@ export const UserList = () => {
       </span>
       {successMessage && <p style={{ color: "green", fontSize: "1rem" }}>{successMessage}</p>}
       {deleteSuccessMessage && <p style={{ color: "green", fontSize: "1rem" }}>{deleteSuccessMessage}</p>}
+      {/* <button onClick={fetchData} className={styles.reloadButton}>
+        Reload Data
+      </button> */}
+      <p style={{ fontSize: "12px", color: "black" }}>No Reload Button needed :-</p>
     </div>
   );
 };

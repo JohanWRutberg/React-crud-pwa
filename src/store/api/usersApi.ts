@@ -43,7 +43,6 @@ export const usersApi = createApi({
       })
     }),
     getUsers: builder.query({
-      // Define the query with an empty object for the 'body' property
       query: () => ({
         baseUrl: "",
         url: "users",
@@ -54,7 +53,7 @@ export const usersApi = createApi({
     updateUser: builder.mutation({
       query: ({ user }) => ({
         baseUrl: "",
-        url: `users/${user.id}`, // Adjust the URL as needed
+        url: `users/${user.id}`,
         method: "PUT",
         body: user
       })
@@ -62,7 +61,7 @@ export const usersApi = createApi({
     deleteUser: builder.mutation({
       query: ({ userId }) => ({
         baseUrl: "",
-        url: `users/${userId}`, // Adjust the URL as needed
+        url: `users/${userId}`,
         method: "DELETE",
         body: {}
       })

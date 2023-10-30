@@ -62,6 +62,7 @@ export const EditUser = ({ id, firstName, lastName, onUpdate, onDelete }) => {
       {isEditing ? (
         <>
           <input
+            style={{ fontSize: "12px", color: "gray", border: "solid 1px", borderRadius: "5px" }}
             type="text"
             value={editedFirstName}
             onChange={(e) => {
@@ -73,6 +74,7 @@ export const EditUser = ({ id, firstName, lastName, onUpdate, onDelete }) => {
           />
 
           <input
+            style={{ fontSize: "12px", color: "gray", border: "solid 1px", borderRadius: "5px" }}
             type="text"
             value={editedLastName}
             onChange={(e) => {
